@@ -7,7 +7,13 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-
+function sum (num1, num2) {
+	var add = (num1 + num2);
+	var str = "The sum of " + num1 + " and " + num2 + " is " + add + ".";
+	console.log(str);
+	var array = [add, str];
+	return array;
+}
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -22,8 +28,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-
+function multiply(num1, num2){
+	var product = (num1 * num2);
+	var str = "The product of " + num1 + " and " + num2 + " is " + product + ".";
+	console.log(str);
+	var array = [product, str];
+	return array;
+}
 // Here is the test for multiply(); uncomment it to run it
+
 testMultiply(4,7);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don"t forget to create a new branch for your work on the next question!
@@ -38,7 +51,14 @@ Fourth element: "The product of 4 and 7 and 5 is 140."
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-
+function sumAndMultiply(num1,num2,num3) {
+	var sumOfParameters = num1 + num2 + num3;
+	var productOfParameters = num1 * num2 * num3;
+	var str = num1 + ' and ' + num2 + ' and ' + num3 + ' sum to ' + sumOfParameters + '.';
+  var str2 = 'The product of ' + num1 + ' and ' + num2 + ' and ' + num3 + ' is ' + productOfParameters + '.';
+  var arr = [sumOfParameters, productOfParameters, str, str2];
+	return arr;
+}
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
@@ -103,7 +123,7 @@ function testMultiply() {
 }
 
 function testSumAndMultiply() {
-  if (sumAndMultiply(4, 7, 5)[1] === "4 and 7 and 5 sum to 16." && sumAndMultiply(4, 7, 5)[2] === "The product of 4 and 7 and 5 is 140.") {
+  if (sumAndMultiply(4, 7, 5)[2] === "4 and 7 and 5 sum to 16." && sumAndMultiply(4, 7, 5)[3] === "The product of 4 and 7 and 5 is 140.") {
     console.log("%c TEST FOR sumAndMultiply() PASSES", "color: green");
   } else {
     console.log("%c TEST FOR sumAndMultiply() FAILS", "color: red");
