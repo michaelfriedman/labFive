@@ -7,7 +7,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+function sum (num1, num2){
+	var add = (num1 + num2);
+	var str = "The sum of " + num1 + " and " + num2 + " is " + add + ".";
+	console.log(str);
+	var array = [add, str];
 
+	return array;
+}
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -103,10 +110,10 @@ function testMultiply() {
 }
 
 function testSumAndMultiply() {
-  if (sumAndMultiply(4, 7, 5)[1] === "4 and 7 and 5 sum to 16." && sumAndMultiply(4, 7, 5)[2] === "The product of 4 and 7 and 5 is 140.") {
-    console.log("%c TEST FOR sumAndMultiply() PASSES", "color: green");
+  if (sumAndMultiply(4, 7, 5)[2] === '4 and 7 and 5 sum to 16.' && sumAndMultiply(4, 7, 5)[3] === 'The product of 4 and 7 and 5 is 140.') {
+    console.log('%c TEST FOR sumAndMultiply() PASSES', 'color: green');
   } else {
-    console.log("%c TEST FOR sumAndMultiply() FAILS", "color: red");
+    console.log('%c TEST FOR sumAndMultiply() FAILS', 'color: red');
   }
 }
 
